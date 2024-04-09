@@ -88,21 +88,157 @@
 # player.play(1)
 
 # 작은수에서 큰수로부터 밑으로 1씩 감소하면서 나눠떨어지면 된다
-def gcd(a,b):
-    if a > b:
-        c = b
-        while(c > 0):
-            if a % c == 0 and b % c == 0:
-                return print(c)
-            else:
-                c -= 1
-    else:
-        c = a
-        while(c > 0):
-            if b % c == 0 and a % c == 0:
-                return print(c)
-            else:
-                c -= 1
-            
+# def gcd(a,b):
+#     if a > b:
+#         c = b
+#         while(c > 0):
+#             if a % c == 0 and b % c == 0:
+#                 return print(c)
+#             else:
+#                 c -= 1
+#     else:
+#         c = a
+#         while(c > 0):
+#             if b % c == 0 and a % c == 0:
+#                 return print(c)
+#             else:
+#                 c -= 1
+# gcd(16,24)
+
+# word = input("Your word: ")
+# for i in word:
+#     if i == 'a':
+#         print(i, end="\n")
+#     else:
+#         print(i, end="")
+
+# class MakeList():
+#     def __init__(self):
+#         self.numList = list()
+        
+#     def normalList(self):
+#         self.numList.clear()
+#         for i in range(0,50):
+#             self.numList.append(i)
     
-gcd(16,24)
+#     def squareList(self):
+#         self.numList.clear()
+#         for i in range(0,50):
+#             self.numList.append(i * i)
+
+    
+#     def getList(self):
+#         print(self.numList)
+        
+# numList = MakeList()
+# numList.normalList()
+# numList.getList()
+# numList.squareList()
+# numList.getList()
+
+# class Months():
+    
+#     def __init__(self):
+#         self.days = {'January':31, 'February':28, 'March':31, 'April':30,
+#         'May':31, 'June':30, 'July':31, 'August':31,
+#         'September':30, 'October':31, 'November':30,
+#         'December':31}
+    
+#     def getMonth(self, month):
+#         print(self.days[month])
+        
+#     def printAllMonths(self):
+#         for month in sorted(self.days.keys()):
+#             print(month)
+            
+#     def printMonths31Days(self):
+#         for month, days in sorted(self.days.items()):  # 사전의 순서는 월의 순서를 따르므로 추가적인 정렬 없이 출력
+#             if days == 31:
+#                 print(month)
+                
+#     def getDaysByAbbreviation(self, abbreviation):
+#         for month, days in self.days.items():
+#             if month[:3].lower() == abbreviation.lower():
+#                 print(f"{month}: {days} days")
+#                 return
+#         print("Invalid abbreviation")
+    
+            
+        
+    
+    
+    
+# month = Months()
+# month.getMonth('January')
+# month.printMonths31Days()
+
+# class Phone():
+#     def __init__(self):
+#         self.d = [{'name':'Todd', 'phone':'555-1414','email':'todd@mail.net'},
+#                   {'name':'Helga', 'phone':'555-1618', 'email':'helga@mail.net'},
+#                   {'name':'Princess','phone':'555-3141', 'email':''},
+#                   {'name':'LJ', 'phone':'555-2718', 'email':'lj@mail.net'}]
+    
+#     def get8PhoneNumber(self):
+#         print("전화번호가 8로 끝나는 사용자 이름을 출력합니다:")
+#         for entry in self.d:
+#             if entry['phone'][-1] == '8':
+#                 print(entry['name'])
+                
+#     def getEmaillessUsers(self):
+#         print("\n이메일이 없는 사용자 이름을 출력합니다:")
+#         for entry in self.d:
+#             if not entry['email']:  # 이메일이 없는 경우
+#                 print(entry['name'])
+                
+#     def getContactInfoByName(self, name):
+#         print(f"\n사용자 이름이 '{name}'인 전화번호와 이메일을 출력합니다:")
+#         for entry in self.d:
+#             if entry['name'] == name:
+#                 print(f"전화번호: {entry['phone']}")
+#                 print(f"이메일: {entry['email']}")
+#                 return
+#         print("해당하는 이름이 없습니다.")
+
+# # Phone 클래스의 인스턴스 생성
+# phone_instance = Phone()
+
+# # 전화번호가 8로 끝나는 사용자 이름 출력
+# phone_instance.get8PhoneNumber()
+
+# # 이메일이 없는 사용자 이름 출력
+# phone_instance.getEmaillessUsers()
+
+# # 사용자 이름으로 전화번호와 이메일 출력
+# phone_instance.getContactInfoByName('Todd')
+# phone_instance.getContactInfoByName('Princess')
+# phone_instance.getContactInfoByName('Mickey')
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def getName(self):
+        print(self.name)
+        
+    def getAge(self):
+        print(self.age)
+    
+class Employee(Person):
+    def __init__(self, name, age, id):
+        self.name = name
+        self.age = age
+        self.employeeID = id
+        
+    def getEmployeeID(self):
+        print(self.employeeID)
+    
+    def getInfo(self):
+        self.getName()
+        self.getAge()
+        self.getEmployeeID()
+        
+taewon = Employee("IoT", 25, 20191532)
+taewon.getInfo()
+    
