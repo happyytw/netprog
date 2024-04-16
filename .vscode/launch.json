@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {"name":"/Users/taewonyoon/파이썬/class/NetProg/build/Debug/outDebug","type":"python","request":"launch","program":"${file}","console":"integratedTerminal","justMyCode":true},
+    {
+      "name": "/Users/taewonyoon/파이썬/class/NetProg/build/Debug/outDebug",
+      "type": "python",
+      "request": "launch",
+      "program": "/Users/taewonyoon/파이썬/class/NetProg/build/Debug/outDebug",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/taewonyoon/파이썬/class/NetProg",
+      "program": "/Users/taewonyoon/파이썬/class/NetProg/build/Debug/outDebug"
+    }
+  ]
+}
