@@ -6,7 +6,7 @@ s.connect(('localhost', 3333))
 
 # 계산식 입력 및 서버로 전송
 while True:
-    expression = input('Enter a calculation (e.g., "20 + 17"): ')
+    expression = input('Enter a calculation: ')
     if expression.lower() == 'q':
         break
     
